@@ -6,3 +6,23 @@ typedef unsigned short u16;
 typedef           short s16;
 typedef unsigned char   u8;
 typedef           char   s8;
+
+enum VGACOLORS
+  {
+    BLACK = 0,
+    BLUE,
+    GREEN,
+    CYAN,
+    RED,
+    MAGENTA,
+    BROWN,
+    LGRAY,
+    DGRAY,
+    LBLUE,
+    LGREEN,
+    LCYAN,
+    LRED,
+    LMAGENTA,
+    YELLOW,
+    WHITE
+  };

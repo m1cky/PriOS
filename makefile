@@ -3,15 +3,18 @@ CFLAGS=
 export CFLAGS
 LDFLAGS+= -ffreestanding -O2 -Wall -Wextra -nostdlib -nostdinc -fno-builtin -fno-stack-protector
 export LDFLAGS
-SRC= kernel.c
+SRC= kernel.c screen.c
 OBJ=$(SRC:.c=.o)
+DEPS = system.h
 EXEC?= PriOS
 
-all: $(SRC)
+all: $(boot.o) 
 	nasm -felf boot.asm -o boot.o
 
-	$(CC) -c $(SRC) -o $(OBJ) $(LDFLAGS)
+	$(CC) -c kernel.c -o kernel.o $(LDFLAGS)
+	$(CC) -c screen.c -o screen.o $(LDFLAGS)
 
 	$(CC) -T linker.ld -o $(EXEC).bin $(LDFLAGS) boot.o $(OBJ) -lgcc
+
 clean:
 	rm -f *~ *.o
