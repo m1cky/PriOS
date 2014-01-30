@@ -1,0 +1,4 @@
+ata0-master: type=cdrom, path="$HOME/Desktop/Pri_OS/PriOS.iso", status=inserted
+boot: cdrom
+megs: 256
+log: bochsout.txt
