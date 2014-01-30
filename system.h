@@ -26,5 +26,4 @@ enum VGACOLORS
     YELLOW,
     WHITE
   };
-
 void putc(char c);
