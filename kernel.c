@@ -2,7 +2,7 @@
 
 int kmain()
 {
-  //putc('P');
+  putc('P');
 
   return 0;
 }
